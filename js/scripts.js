@@ -1,36 +1,42 @@
 //business logic
-function PizzaOrder(size, toppings) {
+function PizzaOptions(size, toppings) {
   this.size = size;
-  this.toppings = toppings;
 }
 
-PizzaOrder.prototype.pizzaTotal = function() {
+function Topping(free, meat, vegetable, extra) {
+  this.free = free;
+  this.meat = meat;
+  this.vegetable = vegetable;
+  this.extra = extra;
+}
+
+PizzaOptions.prototype.pizzaTotal = function() {
   return this.size + this.toppings;
+}
+
+Topping.prototype.allToppings = function() {
+  return this.free + this.meat + this.vegetable + this.extra;
 }
 
 
 //user interface logic
 $(document).ready(function() {
-  $(".pizza-price-toppings").submit(function(event) {
+  $(".build-pizza").submit(function(event) {
     event.preventDefault();
-    $("ul").empty();
 
-    var inputtedSize = parseInt($("input:checkbox[name=size]:checked").val());
-    alert(inputtedSize);
-    //Need to loop through the toppings and get the prices per pizza order//
-    var toppings = //not defined//
-    var checkedToppings = document.getElementByClassName(toppings).checked = true;
-    console.log(checkedToppings);
-    var inputtedToppings = parseInt($("input:radio[name=age]:checked").val());
+    var inputtedSize = parseInt($("input:radio[name=size]:checked").val());
+    console.log(inputtedSize);
+    var inputtedToppings = [];
+    $("input:checkbox:checked").each(function() {
+      inputtedToppings.push($(this).val());
+      console.log(inputtedToppings);
+    });
+    var newPizza = new PizzaOptions(inputtedSize, inputtedToppings);
 
-    var newPizza = new PizzaOrder(inputtedSize, inputtedToppings);
 
 
     $(".show-receipt").show();
 
     $("ul.receiptInfo").append("<li>" + "$" + newPizza.pizzaTotal() + ".00" + "</li>");
-
-
-
   });
 });

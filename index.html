@@ -12,7 +12,7 @@
     <div class="container">
       <h1>Eat Up!</h1>
       <form class="build-pizza">
-        <div class="pizza-size">
+        <div id="pizza-size">
           <h3>Bigger is Better</h3>
           <div class="enormous">
             <label>
@@ -46,8 +46,8 @@
               <div class="freebies">
                 <h4>Freebies</h4>
                 <ul>
-                  <li><input class="toppings" type="checkbox" value="0" id="freeCheese">Free Cheese!</input></li>
-                  <li><input class="toppings" type="checkbox" value="0" id="freeSauce">Free Sauce!</input></li>
+                  <li><input name="topping1" type="checkbox" value="0" id="freeCheese" checked>Free Cheese!</input></li>
+                  <li><input name="topping2" type="checkbox" value="0" id="freeSauce" checked>Free Sauce!</input></li>
                 </ul>
               </div>
             </div>
@@ -55,9 +55,9 @@
               <div class="meat">
                 <h4>Meaty Goodness</h4>
                 <ul>
-                  <li><input class="toppings" type="checkbox" value="4" id="pepperoni">Pepperoni</input></li>
-                  <li><input class="toppings" type="checkbox" value="4" id="sausage">Sausage</input></li>
-                  <li><input class="toppings" type="checkbox" value="4" id="canadianBacon">Canadian Bacon</input></li>
+                  <li><input name="topping" type="checkbox" value="4" id="pepperoni">Pepperoni</input></li>
+                  <li><input name="topping" type="checkbox" value="4" id="sausage">Sausage</input></li>
+                  <li><input name="topping" type="checkbox" value="4" id="canadianBacon">Canadian Bacon</input></li>
                 </ul>
               </div>
             </div>
@@ -65,11 +65,11 @@
               <div class="vegetables">
                 <h4>Keep It Healthy</h4>
                 <ul>
-                  <li><input class="toppings" type="checkbox" value="3" id="mushrooms">Mushrooms</input></li>
-                  <li><input class="toppings" type="checkbox" value="3" id="olives">Olives</input></li>
-                  <li><input class="toppings" type="checkbox" value="3" id="onions">Onions</input></li>
-                  <li><input class="toppings" type="checkbox" value="3" id="peppers">Peppers</input></li>
-                  <li><input class="toppings" type="checkbox" value="3" id="pineapple">Pineapple</input></li>
+                  <li><input name="topping6" type="checkbox" value="3" id="mushrooms">Mushrooms</input></li>
+                  <li><input name="topping7" type="checkbox" value="3" id="olives">Olives</input></li>
+                  <li><input name="topping8" type="checkbox" value="3" id="onions">Onions</input></li>
+                  <li><input name="topping9" type="checkbox" value="3" id="peppers">Peppers</input></li>
+                  <li><input name="topping10" type="checkbox" value="3" id="pineapple">Pineapple</input></li>
                 </ul>
               </div>
             </div>
@@ -77,10 +77,10 @@
               <div class="extras">
                 <h4>Double Up</h4>
                 <ul>
-                  <li><input class="toppings" type="checkbox" value="2" id="doubleSause">Double Cheese</input></li>
-                  <li><input class="toppings" type="checkbox" value="2" id="doubleCheese">Double Sauce</input></li>
-                  <li><input class="toppings" type="checkbox" value="4" id="doubleMeat">Double Meat (each)</input></li>
-                  <li><input class="toppings" type="checkbox" value="3" id="doubleVegetables">Double Vegetables (each)</input></li>
+                  <li><input name="topping11" type="checkbox" value="2" id="doubleSause">Double Cheese</input></li>
+                  <li><input name="topping12" type="checkbox" value="2" id="doubleCheese">Double Sauce</input></li>
+                  <li><input name="topping13" type="checkbox" value="4" id="doubleMeat">Double Meat (each)</input></li>
+                  <li><input name="topping14" type="checkbox" value="3" id="doubleVegetables">Double Vegetables (each)</input></li>
                 </ul>
               </div>
             </div>
@@ -88,6 +88,9 @@
         </div>
         <button class="btn btn-primary" type="submit" name="button">Make My Pizza!</button>
       </form>
+
+      <div id="toppingCost">
+      </div>
 
       <div class="show-receipt">
         <h3>Receipt</h3>
