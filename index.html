@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <h1>Eat Up!</h1>
-      <form class="pizza-price-size">
+      <form class="build-pizza">
         <div class="pizza-size">
           <h3>Bigger is Better</h3>
           <div class="enormous">
@@ -39,25 +39,52 @@
             </label>
           </div>
         </div>
-      </form>
-
-      <form class="pizza-price-toppings">
         <div class="pizza-toppings">
-          <h3>Pick Your Pizza Toppings</h3>
-          <input class="toppings" type="checkbox" value="0" id="freeCheese">Free Cheese!</input>
-          <input class="toppings" type="checkbox" value="0" id="freeSauce">Free Sauce!</input>
-          <input class="toppings" type="checkbox" value="4" id="pepperoni">Pepperoni</input>
-          <input class="toppings" type="checkbox" value="4" id="sausage">Sausage</input>
-          <input class="toppings" type="checkbox" value="4" id="canadianBacon">Canadian Bacon</input>
-          <input class="toppings" type="checkbox" value="3" id="mushrooms">Mushrooms</input>
-          <input class="toppings" type="checkbox" value="3" id="olives">Olives</input>
-          <input class="toppings" type="checkbox" value="3" id="onions">Onions</input>
-          <input class="toppings" type="checkbox" value="3" id="peppers">Peppers</input>
-          <input class="toppings" type="checkbox" value="3" id="pineapple">Pineapple</input>
-          <input class="toppings" type="checkbox" value="2" id="doubleSause">Double Cheese</input>
-          <input class="toppings" type="checkbox" value="2" id="doubleCheese">Double Sauce</input>
-          <input class="toppings" type="checkbox" value="4" id="doubleMeat">Double Meat (each)</input>
-          <input class="toppings" type="checkbox" value="3" id="coubleVegetables">Double Vegetables (each)</input>
+          <h3>Pile On</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="freebies">
+                <h4>Freebies</h4>
+                <ul>
+                  <li><input class="toppings" type="checkbox" value="0" id="freeCheese">Free Cheese!</input></li>
+                  <li><input class="toppings" type="checkbox" value="0" id="freeSauce">Free Sauce!</input></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="meat">
+                <h4>Meaty Goodness</h4>
+                <ul>
+                  <li><input class="toppings" type="checkbox" value="4" id="pepperoni">Pepperoni</input></li>
+                  <li><input class="toppings" type="checkbox" value="4" id="sausage">Sausage</input></li>
+                  <li><input class="toppings" type="checkbox" value="4" id="canadianBacon">Canadian Bacon</input></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="vegetables">
+                <h4>Keep It Healthy</h4>
+                <ul>
+                  <li><input class="toppings" type="checkbox" value="3" id="mushrooms">Mushrooms</input></li>
+                  <li><input class="toppings" type="checkbox" value="3" id="olives">Olives</input></li>
+                  <li><input class="toppings" type="checkbox" value="3" id="onions">Onions</input></li>
+                  <li><input class="toppings" type="checkbox" value="3" id="peppers">Peppers</input></li>
+                  <li><input class="toppings" type="checkbox" value="3" id="pineapple">Pineapple</input></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="extras">
+                <h4>Double Up</h4>
+                <ul>
+                  <li><input class="toppings" type="checkbox" value="2" id="doubleSause">Double Cheese</input></li>
+                  <li><input class="toppings" type="checkbox" value="2" id="doubleCheese">Double Sauce</input></li>
+                  <li><input class="toppings" type="checkbox" value="4" id="doubleMeat">Double Meat (each)</input></li>
+                  <li><input class="toppings" type="checkbox" value="3" id="doubleVegetables">Double Vegetables (each)</input></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <button class="btn btn-primary" type="submit" name="button">Make My Pizza!</button>
       </form>
@@ -68,7 +95,6 @@
 
         </ul>
       </div>
-
     </div>
   </body>
 </html>
