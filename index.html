@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title>Eat Up!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Eat Up!</h1>
+      <form class="pizza-price-size">
+        <div class="pizza-size">
+          <h3>Bigger is Better</h3>
+          <div class="enormous">
+            <label>
+              <input type="radio" name="size" value="30" checked>
+              Enormous
+            </label>
+          </div>
+          <div class="large">
+            <label>
+              <input type="radio" name="size" value="20">
+              Large
+            </label>
+          </div>
+          <div class="medium">
+            <label>
+              <input type="radio" name="size" value="16">
+              Medium
+            </label>
+          </div>
+          <div class="small">
+            <label>
+              <input type="radio" name="size" value="12">
+              Small
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <form class="pizza-price-toppings">
+        <div class="pizza-toppings">
+          <h3>Pick Your Pizza Toppings</h3>
+          <input class="toppings" type="checkbox" value="0" id="freeCheese">Free Cheese!</input>
+          <input class="toppings" type="checkbox" value="0" id="freeSauce">Free Sauce!</input>
+          <input class="toppings" type="checkbox" value="4" id="pepperoni">Pepperoni</input>
+          <input class="toppings" type="checkbox" value="4" id="sausage">Sausage</input>
+          <input class="toppings" type="checkbox" value="4" id="canadianBacon">Canadian Bacon</input>
+          <input class="toppings" type="checkbox" value="3" id="mushrooms">Mushrooms</input>
+          <input class="toppings" type="checkbox" value="3" id="olives">Olives</input>
+          <input class="toppings" type="checkbox" value="3" id="onions">Onions</input>
+          <input class="toppings" type="checkbox" value="3" id="peppers">Peppers</input>
+          <input class="toppings" type="checkbox" value="3" id="pineapple">Pineapple</input>
+          <input class="toppings" type="checkbox" value="2" id="doubleSause">Double Cheese</input>
+          <input class="toppings" type="checkbox" value="2" id="doubleCheese">Double Sauce</input>
+          <input class="toppings" type="checkbox" value="4" id="doubleMeat">Double Meat (each)</input>
+          <input class="toppings" type="checkbox" value="3" id="coubleVegetables">Double Vegetables (each)</input>
+        </div>
+        <button class="btn btn-primary" type="submit" name="button">Make My Pizza!</button>
+      </form>
+
+      <div class="show-receipt">
+        <h3>Receipt</h3>
+        <ul class="receiptInfo">
+
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>
