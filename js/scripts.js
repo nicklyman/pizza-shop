@@ -1,42 +1,38 @@
 //business logic
-function PizzaOptions(size, toppings) {
+function PizzaOrder(size, toppings) {
   this.size = size;
+  this.toppings = toppings;
 }
 
-function Topping(free, meat, vegetable, extra) {
-  this.free = free;
-  this.meat = meat;
-  this.vegetable = vegetable;
-  this.extra = extra;
-}
-
-PizzaOptions.prototype.pizzaTotal = function() {
+PizzaOrder.prototype.pizzaTotal = function() {
   return this.size + this.toppings;
-}
-
-Topping.prototype.allToppings = function() {
-  return this.free + this.meat + this.vegetable + this.extra;
 }
 
 
 //user interface logic
 $(document).ready(function() {
-  $(".build-pizza").submit(function(event) {
+  $(".submit").click(function(event) {
     event.preventDefault();
 
     var inputtedSize = parseInt($("input:radio[name=size]:checked").val());
-    console.log(inputtedSize);
     var inputtedToppings = [];
+
     $("input:checkbox:checked").each(function() {
       inputtedToppings.push($(this).val());
-      console.log(inputtedToppings);
     });
-    var newPizza = new PizzaOptions(inputtedSize, inputtedToppings);
+    console.log(inputtedToppings);
+    var newPizza = new PizzaOrder(inputtedSize, inputtedToppings);
 
+    var toppingPrice = inputtedToppings.map(function(dollar) {
+      return parseInt(dollar, 10);
+    });
+
+    this.toppings = toppingPrice;
+    console.log(this.toppings);
+    console.log(newPizza);
 
 
     $(".show-receipt").show();
-
     $("ul.receiptInfo").append("<li>" + "$" + newPizza.pizzaTotal() + ".00" + "</li>");
   });
 });
