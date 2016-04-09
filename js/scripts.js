@@ -5,7 +5,7 @@ function PizzaOrder(size, toppings) {
 }
 
 PizzaOrder.prototype.pizzaTotal = function() {
-  return this.size + this.toppings;
+  return this.size + this.toppings.join();
 }
 
 
@@ -26,6 +26,13 @@ $(document).ready(function() {
     var toppingPrice = inputtedToppings.map(function(dollar) {
       return parseInt(dollar, 10);
     });
+    console.log(toppingPrice);
+
+    // var totalToppingPrice = 0;
+    // $(".toppings").each(function() {
+    //   totalToppingPrice += parseInt($(this).val());
+    // })
+    // console.log(totalToppingPrice);
 
     this.toppings = toppingPrice;
     console.log(this.toppings);

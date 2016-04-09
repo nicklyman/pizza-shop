@@ -1,7 +1,20 @@
 .show-receipt {
   display: none;
 }
-
+body {
+  text-align: center;
+  font-family: monospace;
+  padding: 30px;
+}
+.pizza-size {
+  padding: 30px;
+}
+.pizza-toppings {
+  padding: 30px;
+}
+h1, h3, h4 {
+  font-weight: bold;
+}
 ul {
   list-style-type: none;
 }
