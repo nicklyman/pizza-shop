@@ -20,7 +20,7 @@ _This website allows a user to select the size of pizza they want using radio bu
 
 ## Known Bugs
 
-_Does not display the correct price due to array issues that need to be addressed._
+_No known bugs._
 
 ## Support and contact details
 
