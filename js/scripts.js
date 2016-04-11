@@ -5,7 +5,7 @@ function PizzaOrder(size, toppings) {
 }
 
 PizzaOrder.prototype.pizzaTotal = function() {
-  return this.size + this.toppings.join();
+  return this.size + this.toppings;
 }
 
 
@@ -20,26 +20,24 @@ $(document).ready(function() {
     $("input:checkbox:checked").each(function() {
       inputtedToppings.push($(this).val());
     });
-    console.log(inputtedToppings);
-    var newPizza = new PizzaOrder(inputtedSize, inputtedToppings);
 
     var toppingPrice = inputtedToppings.map(function(dollar) {
       return parseInt(dollar, 10);
     });
-    console.log(toppingPrice);
 
-    // var totalToppingPrice = 0;
-    // $(".toppings").each(function() {
-    //   totalToppingPrice += parseInt($(this).val());
-    // })
-    // console.log(totalToppingPrice);
+    var totalToppings = 0;
+    for (i = 0; i < toppingPrice.length; i++) {
+      totalToppings += toppingPrice[i];
+    }
 
-    this.toppings = toppingPrice;
+    this.toppings = totalToppings;
     console.log(this.toppings);
-    console.log(newPizza);
+
+    var newPizza = new PizzaOrder(inputtedSize, totalToppings);
 
 
+    //Show receipt on submit//
     $(".show-receipt").show();
-    $("ul.receiptInfo").append("<li>" + "$" + newPizza.pizzaTotal() + ".00" + "</li>");
+    $("h3.receiptInfo").append(" " + "$" + newPizza.pizzaTotal() + ".00");
   });
 });
